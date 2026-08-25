@@ -1,0 +1,23 @@
+{
+  "name": "fmd-sdk-tools",
+  "version": "1.0.0",
+  "description": "Универсальный менеджер инструментов для FMD",
+  "main": "sdk-tools.js",
+  "bin": {
+    "fmd-tools": "./sdk-tools.js"
+  },
+  "scripts": {
+    "build:win": "pkg sdk-tools.js --targets node18-win-x64 --out-path dist/win",
+    "build:linux": "pkg sdk-tools.js --targets node18-linux-x64 --out-path dist/linux"
+  },
+  "dependencies": {
+    "adm-zip": "^0.5.16"
+  },
+  "devDependencies": {
+    "pkg": "^5.8.1"
+  },
+  "pkg": {
+    "assets": [],
+    "outputPath": "dist"
+  }
+}
