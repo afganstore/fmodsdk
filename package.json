@@ -8,7 +8,10 @@
   },
   "scripts": {
     "build:win": "pkg sdk-tools.js --targets node18-win-x64 --out-path dist/win",
-    "build:linux": "pkg sdk-tools.js --targets node18-linux-x64 --out-path dist/linux"
+    "build:linux": "pkg sdk-tools.js --targets node18-linux-x64 --out-path dist/linux",
+    "build:macos-x64": "pkg sdk-tools.js --targets node18-macos-x64 --out-path dist/macos-x64",
+    "build:macos-arm64": "pkg sdk-tools.js --targets node18-macos-arm64 --out-path dist/macos-arm64",
+    "build:all": "npm run build:win && npm run build:linux && npm run build:macos-x64 && npm run build:macos-arm64"
   },
   "dependencies": {
     "adm-zip": "^0.5.16"
